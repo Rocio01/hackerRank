@@ -8,21 +8,35 @@
  *  3. INTEGER b the amount of money that Brian charged Anna for her share of the bill.
  */
 
+// function bonAppetit(bill, k, b) {
+//   // Write your code here
+//   let sum = 0;
+//   let totalBillE = 0
+//   for(let i = 0; i < bill.length; i++){
+//     sum += bill[i];
+//   }
+// totalBillE = (sum - bill[k])/2
+
+// if (b === totalBillE){
+//   console.log("Bon Appetit")
+// } else (
+//   console.log(b - totalBillE)
+// )
+// }
+
+
 function bonAppetit(bill, k, b) {
   // Write your code here
-  let sum = 0;
-  let totalBillE = 0
-  for(let i = 0; i < bill.length; i++){
-    sum += bill[i];
-  }
-totalBillE = (sum - bill[k])/2
+let sum = bill.reduce((accum, current) => accum + current);
+let totalBillE = (sum -bill[k]) / 2;
 
-if (b === totalBillE){
-  console.log("Bon Appetit")
-} else (
-  console.log(b - totalBillE)
-)
+(b === totalBillE) ? console.log("Bon Appetit") : console.log(b - totalBillE);
 }
+
+
+
+
+
 bonAppetit([3, 10, 2, 9], 1, 12)
 // answer 5
 
