@@ -5,11 +5,9 @@
 
 function getMoneySpent(b, keyboards, drives) {
  let result = -1
- 
-
+ let temp = 0;
  for (let i = 0; i < keyboards.length; i++){
-   for(let j = 0; j < drives.length; j++){
-    let temp = 0;
+   for(let j = 0; j < drives.length; j++){  
      if(keyboards[i] + drives[j] < b){
        temp = keyboards[i] + drives[j];
        result = temp > result ? temp : -1
