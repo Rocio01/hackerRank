@@ -27,3 +27,4 @@ console.log(saveThePrisoner(4, 5, 2))
 // 2
 
 // 1234
+console.log(saveThePrisoner(3,7, 3))
